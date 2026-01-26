@@ -272,7 +272,7 @@ address {
     text-align: center;
 }
 .features p {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -367,6 +367,7 @@ address {
     flex-direction: column;
     gap: 72px;
     justify-content: center;
+    align-items: center;
 }
 .team-info {
     padding: 32px 16px;
@@ -472,7 +473,10 @@ address {
 .portfolio-item {
     width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: none;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
     .portfolio-item {
@@ -557,8 +561,10 @@ address {
 @media screen and (min-width: 768px) {
     .footer-content {
         flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 72px;
+        column-gap: 24px;
         align-items: baseline;
-        gap: 120px;
     }
 }
 .footer-info .logo {
@@ -631,7 +637,8 @@ address {
     }
 }
 .footer-subscribe-input {
-    width: 264px;
+    width: 100%;
+    max-width: 288px;
     height: 40px;
     padding-left: 16px;
     font-size: 12px;
@@ -643,6 +650,11 @@ address {
     border-radius: 4px;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+    .footer-subscribe-input {
+        width: 264px;
+    }
 }
 .footer-subscribe-input:focus {
     border-color: #31d0aa;
@@ -920,8 +932,19 @@ address {
     border: none;
     cursor: pointer;
     align-self: flex-end;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.menu-close svg {
+    width: 8px;
+    height: 8px;
+    fill: #2e2f42;
+}
 .mobile-menu-list {
     display: flex;
     flex-direction: column;
@@ -966,4 +989,23 @@ address {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+.mobile-socials a {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-socials a:hover,
+.mobile-socials a:focus {
+    background-color: #404bbf;
+}
+
+.mobile-socials svg {
+    fill: #f4f4fd;
 }
