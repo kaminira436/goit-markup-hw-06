@@ -126,9 +126,24 @@ align-items: center;
     }
 
 }
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 767px) {
     .contacts {
         display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .contacts {
+        display: block;
+    }
+        .contacts ul {
+            flex-direction: column;
+            gap: 12px;
+        }
+}
+@media screen and (min-width: 1158px) {
+    .contacts ul {
+        flex-direction: row;
+        gap: 40px;
     }
 }
 address {
@@ -186,7 +201,6 @@ address {
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
-    max-width: 216px;
     margin: 0 auto 72px;
 }
 @media screen and (min-width: 1158px) {
@@ -198,6 +212,16 @@ address {
         font-size: 56px;
         max-width: 496px;
         margin-bottom: 48px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .effective {
+        padding: 112px 0;
+    }
+
+    .effective h1 {
+        max-width: 496px;
+        margin-bottom: 36px;
     }
 }
 .effective .order {
@@ -253,7 +277,7 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    text-align: center;
+    text-align: left;
 }
 @media screen and (min-width: 1158px) {
     .features {
@@ -263,6 +287,10 @@ address {
     .features h3,
     .features p {
         text-align: left;
+    }
+    .features h3 {
+        font-size: 20px;
+        font-weight: 500;
     }
 }
 .features-icon {
@@ -318,7 +346,12 @@ address {
 }
 .team-section {
     background-color: #f4f4fd;
-    padding: 120px 0;
+    padding: 96px 0;
+}
+@media screen and (min-width: 1158px) {
+    .team-section {
+        padding: 120px 0;
+    }
 }
 .team-section h2 {
     margin-bottom: 72px;
@@ -333,13 +366,14 @@ address {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    justify-content: center;
 }
 .team-info {
     padding: 32px 16px;
     text-align: center;
 }
 .team-person {
-    width: 100%;
+    max-width: 264px;
     background-color: #FFFFFF;
     border-radius: 0 0 4px 4px;
     overflow: hidden;
@@ -438,10 +472,7 @@ address {
 .portfolio-item {
     width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow:
-            0px 1px 6px rgba(46, 47, 66, 0.08),
-            0px 1px 1px rgba(46, 47, 66, 0.16),
-            0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: none;
 }
 @media screen and (min-width: 768px) {
     .portfolio-item {
@@ -451,6 +482,7 @@ address {
 @media screen and (min-width: 1158px) {
     .portfolio-item {
         box-shadow: none;
+        width: calc((100% - 48px) / 3);
     }
 
     .portfolio-item:hover {
@@ -515,6 +547,12 @@ address {
     display: flex;
     flex-direction: column;
     gap: 72px;
+}
+@media screen and (max-width: 767px) {
+    .footer-content {
+        align-items: center;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 768px) {
     .footer-content {
@@ -852,15 +890,22 @@ address {
 
 .mobile-menu {
     position: fixed;
-    inset: 0;
-    background-color: #fff;
-    transform: translateX(100%);
-    transition: transform 250ms ease;
-    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms ease, visibility 250ms ease;
+    z-index: 1000;
 }
 
 .mobile-menu.is-open {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; 
 }
 
 .mobile-menu-container {
@@ -900,13 +945,15 @@ address {
 }
 
 .mobile-phone {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     color: #4d5ae5;
+    margin-bottom: 24px;
 }
 
 .mobile-mail {
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
     color: #434455;
 }
 
@@ -914,4 +961,9 @@ address {
     display: flex;
     gap: 40px;
     margin-top: 48px;
+}
+.mobile-contacts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
