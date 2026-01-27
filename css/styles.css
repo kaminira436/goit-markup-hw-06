@@ -19,6 +19,11 @@ margin: 0;
     letter-spacing: 0.03em;
     margin-right: 76px;
 }
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-right: 120px;
+    }
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -58,7 +63,7 @@ header {
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-    padding: 16px 0;
+    padding: 0;
 }
 header .container {
     display: flex;
@@ -489,7 +494,12 @@ address {
     fill: #f4f4fd;
 }
 .our {
-    padding: 120px 0;
+    padding: 96px 0;
+}
+@media screen and (min-width: 1158px) {
+    .our {
+        padding: 120px 0;
+    }
 }
 .our h2 {
     margin-bottom: 72px;
@@ -582,12 +592,18 @@ address {
 
 .footer {
     background-color: #2e2f42;
-    padding: 100px 0;
+    padding: 96px 0;
+}
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
 }
 .footer-content {
     display: flex;
     flex-direction: column;
     gap: 72px;
+    text-align: center;
 }
 @media screen and (max-width: 767px) {
     .footer-content {
@@ -625,6 +641,7 @@ address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: left;
 }
 .logo-white {
     color: #f4f4fd;
@@ -990,22 +1007,29 @@ address {
 }
 
 .menu-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-    align-self: flex-end;
-    width: 24px;
+width: 24px;
     height: 24px;
     border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .menu-close svg {
     width: 8px;
     height: 8px;
     fill: #2e2f42;
+}
+.menu-close:hover,
+.menu-close:focus {
+    background-color: #404bbf;
+    border-color: #404bbf;
+}
+.menu-close:hover svg,
+.menu-close:focus svg {
+    fill: #ffffff;
 }
 .mobile-menu-list {
     display: flex;
