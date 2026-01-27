@@ -202,7 +202,7 @@ address {
     .contacts .info {
         font-size: 16px;
         line-height: 1.5;
-        padding: 24px 0;
+        padding: 0;
     }
 }
 .effective {
@@ -228,6 +228,19 @@ address {
     text-align: center;
     color: #FFFFFF;
     margin: 0 auto 72px;
+    max-width: 216px;
+}
+@media screen and (min-width: 768px) {
+    .effective {
+        padding: 112px 0;
+    }
+
+    .effective h1 {
+        max-width: 496px;
+        margin-bottom: 36px;
+        font-size: 56px;
+        line-height: 1.07;
+    }
 }
 @media screen and (min-width: 1158px) {
     .effective {
@@ -240,16 +253,7 @@ address {
         margin-bottom: 48px;
     }
 }
-@media screen and (min-width: 768px) {
-    .effective {
-        padding: 112px 0;
-    }
 
-    .effective h1 {
-        max-width: 496px;
-        margin-bottom: 36px;
-    }
-}
 .effective .order {
     display: block;
     margin: 0 auto;
@@ -296,6 +300,11 @@ address {
     color: #2E2F42;
     margin-bottom: 8px;
     text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+    .features h3 {
+        text-align: left;
+    }
 }
 .features p {
     font-weight: 500;
@@ -601,6 +610,11 @@ address {
         padding: 0;
     }
 }
+@media screen and (min-width: 1158px) {
+    .footer-content {
+        column-gap: 120px;
+    }
+}
 .footer-info .logo {
     display: inline-block;
     margin-bottom: 16px;
@@ -677,7 +691,6 @@ address {
 }
 .footer-subscribe-input {
     width: 100%;
-    max-width: 288px;
     height: 40px;
     padding-left: 16px;
     font-size: 12px;
@@ -860,6 +873,12 @@ address {
     border-color: #4d5ae5;
     outline: none;
 }
+.modal-textarea::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+}
 
 .checkbox-input {
     position: absolute;
@@ -952,7 +971,11 @@ address {
     transition: opacity 250ms ease, visibility 250ms ease;
     z-index: 1000;
 }
-
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
 .mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
@@ -1004,6 +1027,9 @@ address {
 }
 .mobile-contacts {
     margin-top: auto;
+}
+.mobile-contacts a {
+    text-decoration: none;
 }
 .mobile-phone {
     font-size: 20px;
