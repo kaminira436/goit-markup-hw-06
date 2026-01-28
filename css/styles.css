@@ -18,10 +18,11 @@ margin: 0;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 0.03em;
     margin-right: 76px;
+    padding: 16px 0;
 }
 @media screen and (min-width: 768px) {
     .logo {
-        margin-right: 120px;
+        margin-right: 76px;
     }
 }
 ul {
@@ -89,7 +90,7 @@ header .container {
 @media (min-width: 1158px) {
     header .contacts {
         flex-direction: row;
-        gap: 40px;
+        gap: 12px;
     }
 
     header .contacts a {
@@ -517,6 +518,11 @@ address {
     row-gap: 48px;
     column-gap: 24px;
 }
+@media screen and (min-width: 768px) {
+    .portfolio-list {
+        row-gap: 72px;
+    }
+}
 .portfolio-item {
     width: 100%;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -707,7 +713,7 @@ address {
     }
 }
 .footer-subscribe-input {
-    width: 100%;
+    width: 288px;
     height: 40px;
     padding-left: 16px;
     font-size: 12px;
@@ -985,7 +991,8 @@ address {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms ease, visibility 250ms ease;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
 }
 @media screen and (min-width: 768px) {
@@ -1007,7 +1014,7 @@ address {
 }
 
 .menu-close {
-width: 24px;
+    width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1016,6 +1023,9 @@ width: 24px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
 }
 .menu-close svg {
     width: 8px;
