@@ -22,6 +22,11 @@ margin: 0;
 }
 @media screen and (min-width: 768px) {
     .logo {
+        margin-right: 120px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .logo {
         margin-right: 76px;
     }
 }
@@ -623,9 +628,17 @@ address {
         flex-wrap: wrap;
         row-gap: 72px;
         column-gap: 24px;
-        align-items: baseline;
+        text-align: left;
+        display: flex;
+        align-items: flex-start;
     }
-}
+        .footer-info,
+            .footer-social,
+            .footer-subscribe {
+                text-align: left;
+        }
+    }
+
 @media (min-width: 768px) and (max-width: 1157px) {
     .footer .container {
         max-width: 584px;
@@ -635,6 +648,8 @@ address {
 @media screen and (min-width: 1158px) {
     .footer-content {
         column-gap: 120px;
+        align-items: flex-start;
+        flex-wrap: nowrap;
     }
 }
 .footer-info .logo {
@@ -687,11 +702,6 @@ address {
 }
 .footer-subscribe {
     margin-left: 0;
-}
-@media (min-width: 1158px) {
-    .footer-subscribe {
-        margin-left: auto;
-    }
 }
 .footer-subscribe-text {
     margin-bottom: 16px;
@@ -911,7 +921,7 @@ address {
     font-size: 12px;
     color: #8e8f99;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     cursor: pointer;
     line-height: 1.33;
@@ -929,13 +939,16 @@ address {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
 }
 .checkbox-input:checked+.checkbox-label .checkbox-custom {
     background-color: #404bbf;
     border: none;
     fill: #ffffff;
 }
-
+.checkbox-text {
+    line-height: 1.4;
+}
 .modal-submit {
     display: block;
     margin: 24px auto 0;
@@ -1007,7 +1020,7 @@ address {
 }
 
 .mobile-menu-container {
-    padding: 24px;
+    padding: 24px 16px;
     height: 100%;
     display: flex;
     flex-direction: column;
